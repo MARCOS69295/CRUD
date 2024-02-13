@@ -1,0 +1,75 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProdutoDAO {
+
+    public void insert(Produto produto) {
+        System.out.println("Inserting " + produto);
+    }
+
+    public void update(Produto produto) {
+        System.out.println("Updating " + produto);
+    }
+
+    public void delete(Produto produto) {
+        System.out.println("Deleting " + produto);
+    }
+
+    public Produto findById() {
+        return findById(0);
+    }
+
+    public Produto findById(int id) {
+        return new Produto("Produto", 100.0, 10);
+    }
+
+    public List<Produto> findAll() {
+        List<Produto> list;
+        list = new ArrayList<>();
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        return list;
+    }
+
+    public List<Produto> findByNome(String nome) {
+        List<Produto> list = new ArrayList<>();
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        return list;
+    }
+
+    public List<Produto> findByPreco(double preco) {
+        List<Produto> list = new ArrayList<>();
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        return list;
+    }
+
+    public List<Produto> findByQuantidade(int quantidade) {
+        List<Produto> list = new ArrayList<>();
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        return list;
+    }
+
+    public List<Produto> findByPrecoAndQuantidade(double preco, int quantidade) {
+        List<Produto> list = new ArrayList<>();
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        return list;
+    }
+
+    public List<Produto> findByNomeAndPreco(String nome, double
+    preco) {
+        List<Produto> list = new ArrayList<>();
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        list.add(new Produto("Produto", 100.0, 10));
+        return list;
+    }
+}
