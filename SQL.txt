@@ -1,0 +1,20 @@
+public class SQLcroup {
+    public static void main(String[] args) {
+        ProdutoDAO produtoDAO = new ProdutoDAO();
+
+        System.out.println("Test 1: insert");
+        Produto produto = new Produto("Produto", 100.0, 10);
+        produtoDAO.insert(produto);
+
+        System.out.println("Test 2: update");
+        produto = new Produto("Produto", 100.0, 10);
+        produtoDAO.update(produto);
+
+        System.out.println("Test 3: delete");
+        produto = new Produto("Produto", 100.0, 10);
+        produtoDAO.delete(produto);
+
+        System.out.println("Test 4: findById");
+        produto = produtoDAO.findById(1);
+    }
+}
